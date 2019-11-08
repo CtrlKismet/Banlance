@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>BR</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BR</title>
+    <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <div id="homePage">
+        <div>
+            <label>输入待评估项数目：</label>
+            <input type="text" v-model="estimateNum" />
+            <input type="button" value="确定" @click="drawPoly(0)" />
+        </div>
+        <svg class="rounds" id="round_0" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500px" height="500px">
+            <circle cx="250" cy="250" r="248" />
+        </svg>
+    </div>
+    <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.loli.net/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
 </html>

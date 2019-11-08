@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    /* color: antiquewhite; */
+}
+
+.rounds circle {
+    fill: #FFFADB;
+    stroke: #E6E1C5;
+}
+
+.rounds line {
+    stroke: #BFBBA4;
+    transition: transform;
+    /* transition-duration: 1s; */
+}
