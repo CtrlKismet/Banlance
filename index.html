@@ -9,16 +9,31 @@
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    <div id="homePage">
-        <div>
-            <label>输入待评估项数目：</label>
-            <input type="text" v-model="estimateNum" />
-            <input type="button" value="确定" @click="drawPoly(0)" />
+    <div id="home_page">
+        <div class="Main_Nav">
+            <div class="Input_Box">
+                <div>
+                    <label>待评估项数目</label>
+                    <input type="text" id="estimate_num" v-model="estimateNum" />
+                </div>
+                <div style="margin-top: 1em;">
+                    <label>待评估项名称</label>
+                    <input type="text" id="estimate_prop" v-model="estimateName" @keyup.enter="DrawText(0)" />
+                </div>
+            </div>
+            <div class="Input_Table">
+                <table id="table_mark">
+                </table>
+            </div>
         </div>
-        <svg class="rounds" id="round_0" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500px" height="500px">
-            <circle cx="250" cy="250" r="248" />
-        </svg>
+        <div class="Main_Page">
+            <div class="Main_Left">
+                <svg class="Rounds" id="round_0" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+                    height="100%">
+                    <circle cx="50%" cy="50%" r="40%" id="round_0_base" />
+                </svg>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.loli.net/ajax/libs/vue/2.6.10/vue.js"></script>

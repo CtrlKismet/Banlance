@@ -3,13 +3,123 @@
     /* color: antiquewhite; */
 }
 
-.rounds circle {
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'PingFang SC', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#home_page {
+    display: grid;
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "nav"
+        "content";
+    width: 100%;
+    height: 100%;
+}
+
+.Main_Nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-areas: 'nav_left nav_middle nav_right';
+    width: 100%;
+    height: 100%;
+}
+
+.Main_Nav .Input_Box {
+    grid-area: nav_left;
+    padding: 1em 2em;
+    font-size: 1.3em;
+}
+
+.Main_Nav .Input_Box input#estimate_num,
+.Main_Nav .Input_Box input#estimate_prop {
+    font-size: .9em;
+    padding: 2px 4px;
+    margin-left: .5em;
+    border: none;
+    outline: none;
+    border-bottom: black solid 1px;
+    /* transition: all 1s; */
+}
+
+.Main_Nav .Input_Box input#estimate_num {
+    text-align: center;
+    width: 2em;
+}
+
+/* .Main_Nav .Input_Box input#estimate_num:focus,
+.Main_Nav .Input_Box input#estimate_num:hover {
+    width: 6em;
+} */
+
+.Main_Nav .Input_Box input#estimate_prop {
+    width: 15em;
+}
+
+/* .Main_Nav .Input_Box input#estimate_prop:focus,
+.Main_Nav .Main_Nav .Input_Box input#estimate_prop:hover {
+    width: 20em;
+} */
+
+.Main_Nav .Input_Table {
+    grid-area: nav_middle;
+}
+
+.Main_Nav .Input_Table table {
+    margin: 1em auto;
+    font-size: 1.25em;
+    border-collapse: collapse;
+}
+
+.Main_Nav .Input_Table table tr:first-child th {
+    width: 5em;
+}
+
+.Main_Nav .Input_Table table th {
+    width: 3em;
+    font-weight: normal;
+}
+
+.Main_Nav .Input_Table table th input[type=text] {
+    width: 3em;
+    padding: 2px 4px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-bottom: black solid 1px;
+}
+
+.Main_Page {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'main_left main_right';
+    width: 100%;
+    height: 100%;
+}
+
+.Main_Page .Main_Left {
+    grid-area: main_left;
+    width: 40em;
+    height: 40em;
+    margin: auto;
+}
+
+.Rounds circle {
     fill: #FFFADB;
     stroke: #E6E1C5;
 }
 
-.rounds line {
+.Rounds line {
     stroke: #BFBBA4;
     transition: transform;
     /* transition-duration: 1s; */
+}
+
+.Rounds text {
+    font-size: 2em;
 }
